@@ -1,0 +1,15 @@
+* Moving Parts
+** Bencode
+The BitTorrrent binary encoding. See [[https://en.wikipedia.org/wiki/Bencode][Wikipedia]].
+
+*** TODO Bencode Progress [2/3]
+- [X] Encoding
+- [X] Decoding
+- [ ] Documentation
+** DHT
+The Distributed Hash Table, used to find others peers.
+** BitTorrent
+The main protocol that is used for downloading / uploading.
+
+
+#  LocalWords:  DHT BitTorrrent Bencode LocalWords
