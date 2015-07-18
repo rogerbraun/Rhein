@@ -1,7 +1,27 @@
 defmodule Rhein.Bencode do
 
-  # Encoding
+  @doc """
 
+  Encode Atoms, Strings, Lists and Maps to the Bencode format.
+
+  ## Examples
+
+    iex> Rhein.Bencode.encode("Hello")
+    "5:Hello"
+
+    iex> Rhein.Bencode.encode(:Hello)
+    "5:Hello"
+
+    iex> Rhein.Bencode.encode(123)
+    "i123e"
+
+    iex> Rhein.Bencode.encode([123, "Hello"])
+    "li123e5:Helloe"
+
+    iex> Rhein.Bencode.encode(%{a: 1, b: "Hello"})
+    "d1:ai1e1:b5:Helloe"
+
+  """
   def encode(atom) when is_atom(atom), do: encode(to_string(atom))
 
   def encode(number) when is_integer(number) do

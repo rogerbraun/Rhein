@@ -1,5 +1,7 @@
 defmodule RheinTest.Bencode do
   use ExUnit.Case
+  doctest Rhein.Bencode
+
   import Rhein.Bencode
 
   test "Encode integers" do
