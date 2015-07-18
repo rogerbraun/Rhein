@@ -53,8 +53,25 @@ defmodule Rhein.Bencode do
     |> wrap_dict.()
   end
 
-  # Decoding
 
+  @doc """
+  Decode Bencoded binaries. Returns a tuple with the result and the remaining
+  binary.
+
+  ## Examples
+
+    iex> Rhein.Bencode.decode("5:Hello")
+    {"Hello", ""}
+
+    iex> Rhein.Bencode.decode("i123e")
+    {123, ""}
+
+    iex> Rhein.Bencode.decode("li123e5:Helloe")
+    {[123, "Hello"], ""}
+
+    iex> Rhein.Bencode.decode("d1:ai123e1:b5:Helloe")
+    {%{"a" => 123, "b" => "Hello"}, ""}
+  """
   # Integers
   def decode(<< ?i, rest::binary >>) do
     r = ~r/^(-?\d+)e(.*)/
