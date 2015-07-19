@@ -2,12 +2,17 @@
 ** Bencode
 The BitTorrrent binary encoding. See [[https://en.wikipedia.org/wiki/Bencode][Wikipedia]].
 
-*** TODO Bencode Progress [2/3]
+*** DONE Bencode Progress [3/3]
+CLOSED: [2015-07-19 Sun 01:13]
 - [X] Encoding
 - [X] Decoding
-- [ ] Documentation
+- [X] Documentation
 ** DHT
 The Distributed Hash Table, used to find others peers.
+*** DHT Progress
+- [ ] Port over code from old version
+  - [ ] Messages
+- [ ] Comprehensive tests.
 ** BitTorrent
 The main protocol that is used for downloading / uploading.
 

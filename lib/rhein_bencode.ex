@@ -80,7 +80,6 @@ defmodule Rhein.Bencode do
   end
 
   # Lists
-
   def decode(<< ?l, rest::binary >>) do
     {reverse_decoded, rest} = decode_elements([], rest)
     {Enum.reverse(reverse_decoded), rest}
@@ -96,7 +95,6 @@ defmodule Rhein.Bencode do
   end
 
   # Dicts
-
   def decode(<< ?d, rest::binary >>) do
     {reverse_decoded, rest} = decode_elements([], rest)
     map = reverse_decoded
